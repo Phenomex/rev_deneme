@@ -1,0 +1,139 @@
+* {
+	color: rgb(39, 7, 19);
+	background-color: rgb(186, 248, 205);
+	margin: 0px;
+}
+
+.main-content {
+	display: flex;
+}
+
+input {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;  
+	margin: 5px;
+	border-radius: 15px;
+	border: rgb(245, 62, 175);
+	border-width: 10px;
+	background-color: rgb(188, 170, 212);
+	font-size: 1em;
+}
+
+canvas {
+	background-color: rgb(148, 194, 236);
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid rgb(75, 247, 212);
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+.title {
+	background-color: rgb(238, 27, 62);
+	color: rgb(121, 34, 179);
+	padding: 10px;
+}
+
+.subtitle {
+	background-color: black;
+	color: gold;
+	padding: 20px;
+}
+
+.convert {
+	padding: 20px;
+}
+
+.left {
+	padding: 20px;
+	width: 50%;
+}
+
+.right {
+	padding: 20px;
+	width: 50%;
+}
