@@ -1,0 +1,1 @@
+document.getElementById("convert-a").getAttribute.length
