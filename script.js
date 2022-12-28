@@ -1,6 +1,14 @@
-var Tyear=document.getElementById(Tyear);
-var Lyear=document.getElementById(Lyear);
-var Tyg=document.getElementById(Tyg);
-var adr=document.getElementById(adr);
-var Dleam=document.getElementById(Dleam);
-var Calculate=document.getElementById(hesapla)
+var thisyear=document.getElementById("Tyear");
+var lastyear=document.getElementById("Lyear");
+var thisyeargoal=document.getElementById("Tyg");
+var averagedailyrate=document.getElementById("adr");
+var daysleft=document.getElementById("Dleam");
+var btnHesap=document.getElementById("hesapla");
+var sonuc=document.getElementById("sonuc");
+
+
+btnHesap.onclick=function(){
+  var toplam = Number(Tyg.value) / Number(Dleam.value) / Number(adr.value);
+  sonuc.innerHTML=toplam;
+
+}
